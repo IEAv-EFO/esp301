@@ -1,0 +1,43 @@
+# Useful commands
+#
+# VA – set velocity
+# AC – set acceleration
+# AG – set deceleration
+# PR – position relative
+# PA – position absolute
+# TP – tell position
+# WS – wait for stop
+# WT - wait for time
+#
+# DL - define label
+# JL - Jump to label
+
+
+
+1ac100
+1va40
+1pa0
+1ws1000
+
+1va1; 1pa+5; 1ws; 1pa-5;1ws500
+
+1va5; 1pa+5; 1ws; 1pa-5;1ws500
+
+1va10; 1pa+15; 1ws; 1pa-15;1ws500
+
+1va15; 1pa+15; 1ws; 1pa-15;1ws500
+
+1va20; 1pa+15; 1ws; 1pa-15;1ws500
+
+1va25; 1pa+15; 1ws; 1pa-15;1ws500
+
+1va30; 1pa+15; 1ws; 1pa-15;1ws500
+
+1va35; 1pa+15; 1ws; 1pa-15;1ws500
+
+1va40; 1pa+15; 1ws; 1pa-15;1ws500
+
+1ac100
+1va40
+1pa0
+1ws1000
