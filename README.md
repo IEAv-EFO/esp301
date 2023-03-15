@@ -1,4 +1,4 @@
-# NEwport ESP301 motion controller
+# Newport ESP301 motion controller
 
 Files and drivers required to use the equipment.
 
