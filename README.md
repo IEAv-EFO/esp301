@@ -8,11 +8,26 @@ Requirements: dotnet 3.5
 
 This labview driver seems to be official, but the labview we got from Newport website is in folder Labview firmware, which differs a lot from Labview driver. The Labview driver is way more detailed and complete. 
 
-Terminator carriage return constant
+Baudrate: 19200
+
+Data bits: 8 
+
+Stop bits: 1
+
+Parity: None
+
+Flow control: RTS/CTS
+
+Timeout: 5000
+
+Terminator: carriage return constant `\r`
 
 visa flush io buffer
+
 mask 16: xC0
 
 visa set io buffer size
+
 mask 16: x30
+
 size:4096
