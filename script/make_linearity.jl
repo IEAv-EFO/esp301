@@ -7,13 +7,13 @@ file = open(file_name, "w")
 
 # position limits 
 pos_lim = 90
-time_lim = 5
+time_lim = 2.25 # 90deg / 40deg/s
 
 # angular velocities are in deg/s
 first_vel = 1
 last_vel = 40
 step_vel = 0.5
-delay_between_vel = 1000
+delay_between_vel = 0
 
 angular_vel = first_vel:step_vel:last_vel
 
