@@ -35,7 +35,7 @@ for speed in angular_vel
         pos = pos_lim
     end
 
-    command = @sprintf("1va%.3f; 1pr+%.3f; 1ws; 1pr-%.3f; 1ws%.3f\n",speed,pos,pos,delay_between_vel)
+    command = @sprintf("1va%.3f; 1pr+%.3f; 1ws; 1pr-%.3f; 1ws%.f\n",speed,pos,pos,delay_between_vel)
     write(file, command)
 
     # Creating a mock signal of the trajectory.
