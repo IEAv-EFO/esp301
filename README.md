@@ -4,6 +4,13 @@ Files and drivers required to use the equipment.
 
 Requirements: dotnet 3.5
 
+## Routine to make work serial and USB
+start esp301 gui via USB
+set remote mode
+close esp301 gui
+connect visa with usb com port or RS232
+sent command with `\r` terminator
+
 ## Info from Labview driver
 
 This labview driver seems to be official, but the labview we got from Newport website is in folder Labview firmware, which differs a lot from Labview driver. The Labview driver is way more detailed and complete. 
