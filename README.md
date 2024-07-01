@@ -5,6 +5,7 @@ Files and drivers required to use the equipment.
 Requirements: dotnet 3.5
 
 ## Routine to make work serial and USB
+PL2303 driver version working with windows 11: v3.9.5 (2023)
 start esp301 gui via USB
 set remote mode
 close esp301 gui
