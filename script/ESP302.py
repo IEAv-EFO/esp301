@@ -57,6 +57,14 @@ class ESP302():
         message = ( str(motor) + "ST") .encode()
         self.sendMessage(message)
     
+    def motor_on(self, motor):
+        message = ( str(motor) + "MO") .encode()
+        self.sendMessage(message)
+
+    def define_software_limit(self, motor, limit=0):
+        message = ( str(motor) + "ZS0" + str(limit)) .encode()
+        self.sendMessage(message)
+
     def isMoving(self, motor):
         pass
         
