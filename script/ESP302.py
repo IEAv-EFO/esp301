@@ -24,46 +24,35 @@ class ESP302():
         self.s.close()
     
     def sendMessage(self, message):
-        self.s.send(message)
+        self.s.send(message.encode())
         return self.s.recv(BUFFER_SIZE).decode().strip().split(",")[1]
         
     def getPosition(self, motor):
-        message = ( str(motor) + "TP?" ) .encode()
-        # print ("getPosition :", self.sendMessage(message) )
-        return self.sendMessage(message)
+        return self.sendMessage(f"{motor}TP?")
 
     def moveRelative(self, motor, pas):
-        message = ( str(motor) + "PR" + str(pas) ) .encode()
-        self.sendMessage(message)
+        self.sendMessage(f"{motor}PR{pas}")
     
     def moveAbsolute(self, motor, pos):
-        message = ( str(motor) + "PA" + str(pos) ) .encode()
-        self.sendMessage(message)
+        self.sendMessage(f"{motor}PA{pos}")
     
     def getMaxVelocity(self, motor):
-        message = ( str(motor) + "VU?" ) .encode()
-        print ("getMaxVelocity :", self.sendMessage(message) )
+        return self.sendMessage(f"{motor}VU?")
     
     def getVelocity(self, motor):
-        message = ( str(motor) + "VA?" ) .encode()
-        # print ("getVelocity :", self.sendMessage(message) )
-        return self.sendMessage(message)
+        return self.sendMessage(f"{motor}VA?")
     
     def setVelocity(self, motor, velocity):
-        message = ( str(motor) + "VA" + str(velocity) ) .encode()
-        self.sendMessage(message)
+        self.sendMessage(f"{motor}VA{velocity}")
 
     def stopMotor(self, motor):
-        message = ( str(motor) + "ST") .encode()
-        self.sendMessage(message)
+        self.sendMessage(f"{motor}ST")
     
     def motor_on(self, motor):
-        message = ( str(motor) + "MO") .encode()
-        self.sendMessage(message)
+        self.sendMessage(f"{motor}MO")
 
     def define_software_limit(self, motor, limit=0):
-        message = ( str(motor) + "ZS0" + str(limit)) .encode()
-        self.sendMessage(message)
+        self.sendMessage(f"{motor}ZS0{limit}")
 
     def isMoving(self, motor):
         pass
